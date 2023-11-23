@@ -16,8 +16,8 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import br.com.fiap.myconde.model.Sindico
-import br.com.fiap.myconde.sampledata.sampleSindicoWithImage
-import br.com.fiap.myconde.sampledata.sampleSindicoWithoutImage
+//import br.com.fiap.myconde.sampledata.sampleSindicoWithImage
+//import br.com.fiap.myconde.sampledata.sampleSindicoWithoutImage
 import br.com.fiap.myconde.ui.theme.MyCondeTheme
 
 @Composable
@@ -48,32 +48,32 @@ fun SindicoCard(
                 .padding(16.dp)
                 .fillMaxWidth()
         ) {
-            Text(
-                text = sindico.nome,
-                maxLines = 2,
-                overflow = TextOverflow.Ellipsis
-            )
+//            Text(
+//                text = sindico.nome,
+//                maxLines = 2,
+//                overflow = TextOverflow.Ellipsis
+//            )
 
         }
     }
 }
 
-@Preview
-@Composable
-private fun SindicoCardPreview() {
-    MyCondeTheme {
-        SindicoCard(
-            sindico = sampleSindicoWithoutImage
-        )
-    }
-}
-
-@Preview
-@Composable
-private fun SindicoCardWithImagePreview() {
-    MyCondeTheme {
-        SindicoCard(
-            sindico = sampleSindicoWithImage
-        )
-    }
-}
+//@Preview
+//@Composable
+//private fun SindicoCardPreview() {
+//    MyCondeTheme {
+//        SindicoCard(
+//            sindico = sampleSindicoWithoutImage
+//        )
+//    }
+//}
+//
+//@Preview
+//@Composable
+//private fun SindicoCardWithImagePreview() {
+//    MyCondeTheme {
+//        SindicoCard(
+//            sindico = sampleSindicoWithImage
+//        )
+//    }
+//}

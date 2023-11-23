@@ -15,6 +15,7 @@ sealed class AppDestination(val route: String) {
     object Avaliacoes : AppDestination("avaliacoes")
     object SindicoDetails : AppDestination("sindicotDetails")
     object Checkout : AppDestination("checkout")
+    object AvaliacaoSindico : AppDestination("adicionarAvaliacao")
 }
 
 val bottomAppBarItems = listOf(
@@ -23,6 +24,4 @@ val bottomAppBarItems = listOf(
         icon = Icons.Filled.Home,
         destination = AppDestination.Highlight
     ),
-
-
 )

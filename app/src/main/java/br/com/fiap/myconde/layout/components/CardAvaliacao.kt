@@ -23,17 +23,16 @@ import androidx.compose.ui.unit.sp
 import br.com.fiap.myconde.R
 import br.com.fiap.myconde.model.Avaliacao
 import br.com.fiap.myconde.model.Sindico
-import br.com.fiap.myconde.sampledata.sampleAvaliacaoWithImage
-import br.com.fiap.myconde.sampledata.sampleAvaliacaoWithoutImage
-import br.com.fiap.myconde.sampledata.sampleSindicoWithImage
-import br.com.fiap.myconde.sampledata.sampleSindicoWithoutImage
+//import br.com.fiap.myconde.sampledata.sampleAvaliacaoWithImage
+//import br.com.fiap.myconde.sampledata.sampleAvaliacaoWithoutImage
+//import br.com.fiap.myconde.sampledata.sampleSindicoWithImage
+//import br.com.fiap.myconde.sampledata.sampleSindicoWithoutImage
 import br.com.fiap.myconde.ui.theme.MyCondeTheme
 
 @Composable
 fun CardAvaliacao(
     avalicao: Avaliacao,
-    modifier: Modifier = Modifier,
-    onOrderClick: () -> Unit = {}
+    modifier: Modifier = Modifier
 ) {
     Card(
         modifier
@@ -45,20 +44,7 @@ fun CardAvaliacao(
 
     ) {
         Column(Modifier.fillMaxWidth()) {
-//            product.image?.let { image ->
-//                AsyncImage(
-//                    image,
-//                    contentDescription = null,
-//                    Modifier
-//                        .fillMaxWidth()
-//                        .height(116.dp),
-//                    placeholder = painterResource(id = R.drawable.placeholder),
-//                    contentScale = ContentScale.Crop,
-//                )
-//            }
             Row {
-
-
                 Column(
                     Modifier
                         .padding(top = 10.dp, bottom = 10.dp)
@@ -71,7 +57,6 @@ fun CardAvaliacao(
                         overflow = TextOverflow.Ellipsis
                     )
                 }
-
             }
             Row {
                 Column( Modifier.padding(1.dp).padding(bottom = 10.dp)) {
@@ -83,36 +68,26 @@ fun CardAvaliacao(
                 }
 
             }
-
-
-
-//            Text(text = sindico.classificacao)
-//            Spacer(Modifier.height(16.dp))
-//
-
-
-
-
         }
     }
 }
 
-@Preview
-@Composable
-private fun MenuAvaliacaoPreview() {
-    MyCondeTheme {
-        CardAvaliacao(
-            avalicao = sampleAvaliacaoWithoutImage
-        )
-    }
-}
-
-@Preview
-@Composable
-private fun MenuAvaliacaoCardWithImagePreview() {
-    MyCondeTheme {
-        CardAvaliacao(
-            avalicao = sampleAvaliacaoWithImage
-        )
-    }
-}
+//@Preview
+//@Composable
+//private fun MenuAvaliacaoPreview() {
+//    MyCondeTheme {
+//        CardAvaliacao(
+//            avalicao = sampleAvaliacaoWithoutImage
+//        )
+//    }
+//}
+//
+//@Preview
+//@Composable
+//private fun MenuAvaliacaoCardWithImagePreview() {
+//    MyCondeTheme {
+//        CardAvaliacao(
+//            avalicao = sampleAvaliacaoWithImage
+//        )
+//    }
+//}

@@ -19,7 +19,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.com.fiap.myconde.layout.components.MenuSindicoCard
 import br.com.fiap.myconde.model.Sindico
-import br.com.fiap.myconde.sampledata.sampleSindicos
+//import br.com.fiap.myconde.sampledata.sampleSindicos
 import br.com.fiap.myconde.ui.theme.MyCondeTheme
 
 @Composable
@@ -52,24 +52,20 @@ fun MenuListScreen(
             items(sindicos) { s ->
                 MenuSindicoCard(
                     sindico = s,
-                    Modifier
-                        .clickable {
-                            onNavigateToDetails(s)
-                        }
                 )
             }
         }
     }
 }
 
-@Preview
-@Composable
-fun MenuListScreenPreview() {
-    MyCondeTheme {
-        Surface {
-            MenuListScreen(
-                sindicos = sampleSindicos
-            )
-        }
-    }
-}
+//@Preview
+//@Composable
+//fun MenuListScreenPreview() {
+//    MyCondeTheme {
+//        Surface {
+//            MenuListScreen(
+//                sindicos = sampleSindicos
+//            )
+//        }
+//    }
+//}

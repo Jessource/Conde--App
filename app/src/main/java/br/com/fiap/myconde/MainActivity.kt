@@ -30,15 +30,11 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import br.com.fiap.myconde.layout.components.BottomAppBarItem
 import br.com.fiap.myconde.layout.components.CondeBottomAppBar
-import br.com.fiap.myconde.layout.screens.CheckoutScreen
-
-import br.com.fiap.myconde.layout.screens.MenuListScreen
+import br.com.fiap.myconde.layout.screens.AvaliacaoSindicoScreen
 import br.com.fiap.myconde.layout.screens.MenuSindicoListScreen
 import br.com.fiap.myconde.layout.screens.SindicoDetailsScreen
-import br.com.fiap.myconde.layout.screens.SindicoListScreen
 import br.com.fiap.myconde.navigation.AppDestination
 import br.com.fiap.myconde.navigation.bottomAppBarItems
-import br.com.fiap.myconde.sampledata.sampleSindicos
 import br.com.fiap.myconde.ui.theme.MyCondeTheme
 import kotlinx.coroutines.flow.map
 
@@ -88,7 +84,6 @@ class MainActivity : ComponentActivity() {
                             navController.navigate(route) {
                                 launchSingleTop = true
                                 popUpToRoute
-
                             }
                         },
                         onFabClick = {
@@ -104,30 +99,6 @@ class MainActivity : ComponentActivity() {
                         ) {
                             composable(AppDestination.Highlight.route) {
                                 MenuSindicoListScreen(
-                                    sindicos = sampleSindicos,
-                                    onNavigateToDetails = { sindico ->
-                                        navController.navigate(
-                                            "${AppDestination.SindicoDetails.route}/${sindico.id}"
-                                        )
-                                    },
-                                    onNavigateToCheckout = {
-                                        navController.navigate(AppDestination.Checkout.route)
-                                    },
-                                )
-                            }
-                            composable(AppDestination.Menu.route) {
-                                MenuListScreen(
-                                    sindicos = sampleSindicos,
-                                    onNavigateToDetails = { sindico ->
-                                        navController.navigate(
-                                            "${AppDestination.SindicoDetails.route}/${sindico.id}"
-                                        )
-                                    },
-                                )
-                            }
-                            composable(AppDestination.Avaliacoes.route) {
-                                SindicoListScreen(
-                                    sindicos = sampleSindicos,
                                     onNavigateToDetails = { sindico ->
                                         navController.navigate(
                                             "${AppDestination.SindicoDetails.route}/${sindico.id}"
@@ -139,25 +110,13 @@ class MainActivity : ComponentActivity() {
                                 "${AppDestination.SindicoDetails.route}/{sindicoId}"
                             ) { backStackEntry ->
                                 val id = backStackEntry.arguments?.getString("sindicoId")
-                                sampleSindicos.find {
-                                    it.id == id
-                                }?.let { sindico ->
-                                    SindicoDetailsScreen(
-                                        sindico = sindico,
-                                        onNavigateToCheckout = {
-                                            navController.navigate(AppDestination.Checkout.route)
-                                        },
-                                    )
-                                } ?: LaunchedEffect(Unit) {
-                                    navController.navigateUp()
-                                }
+                                SindicoDetailsScreen(
+                                    id,
+                                )
                             }
-                            composable(AppDestination.Checkout.route) {
-                                CheckoutScreen(
-                                    sindicos = sampleSindicos,
-                                    onPopBackStack = {
-                                        navController.navigateUp()
-                                    },
+                            composable(AppDestination.AvaliacaoSindico.route) {
+                                AvaliacaoSindicoScreen(
+//                                    sindico = sampleSindicos[0],
                                 )
                             }
                         }

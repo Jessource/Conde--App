@@ -35,7 +35,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.com.fiap.myconde.layout.components.CheckoutItemCard
 import br.com.fiap.myconde.model.Sindico
-import br.com.fiap.myconde.sampledata.sampleSindicos
+//import br.com.fiap.myconde.sampledata.sampleSindicos
 import br.com.fiap.myconde.ui.theme.MyCondeTheme
 
 @Composable
@@ -167,17 +167,17 @@ fun CheckoutScreen(
     }
 }
 
-@Preview
-@Composable
-fun CheckoutScreenPreview() {
-    MyCondeTheme {
-        Surface {
-            CheckoutScreen(
-                sindicos = sampleSindicos
-            )
-        }
-    }
-}
+//@Preview
+//@Composable
+//fun CheckoutScreenPreview() {
+//    MyCondeTheme {
+//        Surface {
+//            CheckoutScreen(
+//                sindicos = sampleSindicos
+//            )
+//        }
+//    }
+//}
 
 @Preview
 @Composable

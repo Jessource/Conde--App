@@ -17,7 +17,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import br.com.fiap.myconde.layout.components.CardAvaliacao
 import br.com.fiap.myconde.model.Avaliacao
-import br.com.fiap.myconde.sampledata.sampleAvaliacao
+//import br.com.fiap.myconde.sampledata.sampleAvaliacao
 import br.com.fiap.myconde.ui.theme.MyCondeTheme
 
 
@@ -49,27 +49,22 @@ fun AvaliacaoListScreen(
                     avalicao = a,
                     Modifier.clickable {
                             onNavigateToDetails(a)
-                    },
-                    onOrderClick = onNavigateToCheckout
-
+                    }
                 )
             }
         }
     }
 
 }
-@Preview
-@Composable
-fun MenuAvaliacaoListScreenPreview() {
-
-           MyCondeTheme {
-               Surface {
-                   AvaliacaoListScreen(
-                       avaliacoes = sampleAvaliacao
-
-                   )
-               }
-           }
-
-
-}
+//@Preview
+//@Composable
+//fun MenuAvaliacaoListScreenPreview() {
+//    MyCondeTheme {
+//       Surface {
+//           AvaliacaoListScreen(
+//               avaliacoes = sampleAvaliacao
+//
+//           )
+//       }
+//    }
+//}

@@ -25,7 +25,7 @@ import androidx.compose.ui.unit.sp
 import br.com.fiap.myconde.layout.components.CheckoutItemCard
 import br.com.fiap.myconde.layout.components.SindicoCard
 import br.com.fiap.myconde.model.Sindico
-import br.com.fiap.myconde.sampledata.sampleSindicos
+//import br.com.fiap.myconde.sampledata.sampleSindicos
 import br.com.fiap.myconde.ui.theme.MyCondeTheme
 
 @OptIn(ExperimentalFoundationApi::class)
@@ -75,15 +75,15 @@ fun SindicoListScreen(
     }
 }
 
-@Preview
-@Composable
-fun DrinksListScreenPreview() {
-    MyCondeTheme {
-        Surface {
-            SindicoListScreen(
-                sindicos = sampleSindicos,
-                title = "Sindicos"
-            )
-        }
-    }
-}
+//@Preview
+//@Composable
+//fun DrinksListScreenPreview() {
+//    MyCondeTheme {
+//        Surface {
+//            SindicoListScreen(
+//                sindicos = sampleSindicos,
+//                title = "Sindicos"
+//            )
+//        }
+//    }
+//}
